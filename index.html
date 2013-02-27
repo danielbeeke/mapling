@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <script data-main="javascripts/main" src="javascripts/require-jquery.js"></script>
+  <script src="javascripts/jquery-1.9.1.min.js"></script>
+  <script src="javascripts/main.js"></script>
+
+  <!-- Libraries -->
+  <script src="assets/foundation/javascripts/modernizr.foundation.js"></script>
+  <script src="assets/leaflet/dist/leaflet.js"></script>
+
+  <!-- Modules -->
+  <script src="javascripts/viewToggle.js"></script>
+  <script src="javascripts/map.js"></script>
 
   <link rel="stylesheet" href="assets/foundation/stylesheets/foundation.min.css">
   <link rel="stylesheet" href="assets/foundation/stylesheets/app.css">
 
   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="assets/leaflet/dist/leaflet.css" />
+  <!--[if lte IE 8]>
+     <link rel="stylesheet" href="assets/leaflet/dist/leaflet.ie.css" />
+  <![endif]-->
   <!--[if IE]>
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
-
+  <meta name="viewport" content="width=device-width" />
 </head>
 <body>
 
 <div class="container">
+  <!-- Left panel -->
   <div class="left" id="left">
-    <form>
-      <input type="text" placeholder="Search" />
-    </form>
-    <a class="button" href="#">Medium</a>
-    <ul class="nav-bar vertical">
-      <li><a href="#">Nav Item 1</a></li>
-      <li><a href="#">Nav Item 4</a></li>
-    </ul>
   </div>
 
-  <div class="main">
-    <a href="#left" class="toggle show-left button">show-left</a>
-    <a href="#right" class="toggle show-right button">show-right</a>
+  <!-- Main panel -->
+  <div id="map" class="main">
+    <a href="#left" class="toggle show-left button">&#9776;</a>
+    <a href="#right" class="toggle show-right button">&#57349;</a>
   </div>
 
-  <div class="right" id="right">right</div>
+  <!-- Right panel -->
+  <div class="right" id="right">
+  </div>
+
 </div>
 
 </body>

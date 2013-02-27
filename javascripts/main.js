@@ -1,11 +1,16 @@
+/*
+ * Javascript chainer,
+ * Works a lot like Drupal.behaviours
+ **/
+
 $.fn.behaviours = {};
 
-require(["jquery", "view.toggle"], function($) {
-    $(function() {
+$(document).ready(function() {
 
-      $.each($.fn.behaviours, function() {
-        this.attach();
-      });
+  var settings = [];
 
-    });
+  $.each($.fn.behaviours, function() {
+    this.attach(settings);
+  });
+
 });

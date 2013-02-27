@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Entypo';
+  src: url('../assets/entypo/entypo.eot?#iefix') format('embedded-opentype'),
+       url('../assets/entypo/entypo.woff') format('woff'),
+       url('../assets/entypo/entypo.ttf')  format('truetype'),
+       url('../assets/entypo/entypo.svg#Entypo') format('svg');
+  }
+
+.toggle {
+  font-family: 'Entypo';
+  font-size: 4em;
+  font-weight: normal;
+  line-height: 0.3em;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  display: block;
+}
