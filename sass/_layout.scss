@@ -5,7 +5,7 @@
 
 $total-columns : 5;
 $column-width : 4em;
-$gutter-width : 1em;
+$gutter-width : 0em;
 $grid-padding : 1em;
 
 $medium-columns : 8;
@@ -19,11 +19,10 @@ $container-width : container-outer-width($large-columns);
 @include border-box-sizing;
 
 .container {
-  // @include container;
   overflow: hidden;
-  @include susy-grid-background;
-  @include at-breakpoint($medium-columns) { @include susy-grid-background; }
-  @include at-breakpoint($large-columns) { @include susy-grid-background; }
+  // @include susy-grid-background;
+  // @include at-breakpoint($medium-columns) { @include susy-grid-background; }
+  // @include at-breakpoint($large-columns) { @include susy-grid-background; }
 }
 
 // --------------------------------------------
@@ -110,16 +109,9 @@ html, body, .container {
   height: 100%;
 }
 
-.left {
-  background: rgba(#cff,.75);
-}
-
-.main {
-  background: rgba(#eee,.75);
-}
-
-.right {
-  background: rgba(#ffc,.75);
+.left, .right {
+  position: relative;
+  z-index: 20;
 }
 
 .button.show-left {
@@ -130,3 +122,4 @@ html, body, .container {
   @include omega;
   @include span-columns(1 omega, 5);
 }
+
